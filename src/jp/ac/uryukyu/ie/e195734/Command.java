@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Command {
     int mode = 0;
-    public  ArrayList<Player> players = new ArrayList<>();
+    public ArrayList<Player> players = new ArrayList<>();
     private ArrayList<String> sc;
     private ArrayList<Player> targetPl;
 
@@ -21,6 +21,8 @@ public class Command {
         while(true){
             this.sc = new ArrayList<>(Arrays.asList(scanner.nextLine().split(" ")));
             this.targetPl = null;
+
+            System.out.println("plz type help");
             if(this.sc.get(0).equals("")){
                 continue;
             }
@@ -113,7 +115,7 @@ public class Command {
 
             }
         } else{
-            System.out.println("正しく入力してください。\n使用例:stat <技能値> [プレイヤー名]");
+            System.out.println("正しく入力してください。\n使用例:stat [プレイヤー名] <技能値>");
         }
 
     }

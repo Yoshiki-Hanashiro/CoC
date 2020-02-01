@@ -30,7 +30,7 @@ public class Roll {
         int dice = Dice();
         String[] formulas = formula.split("/");
         int result = check(stat,dice);
-        int decrease = 0;
+        int decrease;
         if(result<=1){
             decrease = calculate(formulas[0]);
         }
