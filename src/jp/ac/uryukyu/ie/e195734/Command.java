@@ -86,7 +86,7 @@ public class Command {
     }
 
     private void help(){
-        if(this.sc.get(1).equals("roll")) {
+        if(this.sc.size()==2) {
             System.out.println("rollモード時のコマンドの使用法 \n <技能名> [プレイヤー名] [難易度] \n san <減少値> [プレイヤー名] \n プレイヤー名はカンマで区切って複数名記述可能 \n 難易度は n h e \n 減少値は 0/1d6+1 などのように記述");
         } else {
             System.out.println("使用可能なコマンド一覧 \n roll -rollモードに入ります。(help roll 参照) \n load <ファイルパス> -プレイヤーデータを読み込みます \n save [プレイヤー名] -プレイヤーデータをセーブします \n stat [プレイヤー名] [技能名] -プレイヤーのステータスを表示します \n fin. [bool] -セーブして終了します。true でセーブを行いません\n");
